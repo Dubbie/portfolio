@@ -1,48 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <title>Miho Daniel</title>
+
+    <!-- Meta tags -->
     <meta charset="utf-8">
-    <title>MihoDaniel</title>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="./css/master.css" media="screen" title="no title" charset="utf-8">
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
-	  <script type='text/javascript' src='./js/jquery.scrollTo.min.js'></script>
-    <script type='text/javascript' src='./js/scroll.js'></script>
+    <meta name="author" content="Mihó Dániel">
+    <meta name="description" content="Portfolio of Daniel Miho">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+
+    <!-- Critical CSS -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #111;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 16px;
+        overflow-y: scroll;
+      }
+
+      .logo-container {
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin-bottom: 4em;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .logo-container .logo {
+        position: absolute;
+        display: block;
+        left: 0;
+        bottom: 0;
+        opacity: 1;
+      }
+
+      .wrapper {
+        max-width: 100%;
+        width: 700px;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .fadeIn, .slideDown, .slideUp, .slideRight, .slideLeft {
+        opacity: 0;
+      }
+
+      .animate {
+        transition: all 500ms ease-in-out;
+      }
+    </style>
+
+    <!-- Stylesheets -->
+    <link rel="preload" href="css/test.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/master.css"></noscript>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#section1" class="circle isActive"></a></li>
-        <li><a href="#section2" class="circle"></a></li>
-        <li><a href="#section3" class="circle"></a></li>
-        <li><a href="#section4" class="circle"></a></li>
-      </ul>
-    </nav>
-    <section id="section1">
-      <div class="logo">
-        <h1>MIHÓ DÁNIEL</h1>
+    <div class="wrapper">
+      <div id="portfolio" class="container padded">
+        <a href="/" class="logo-container">
+          <svg class="logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 499.4277 219.58176">
+            <path fill="#fff" d="m279.85 0.47041-69.35 69.349-30.55-30.546-179.15 179.98h497.82l-218.77-218.78zm36.261 101.05 56.389 56.389h-56.389v-56.389z" fill-rule="evenodd"/>
+          </svg>
+        </a>
+        <section id="intro" class="animate fadeIn">
+          <h1>Hello, my name is Mihó Dániel.</h1>
+          <p>Based in Hungary, studying Computer Science in University. Currently I'm available for freelance work. You can contact me at <a href="mailto:dev.mihodaniel@gmail.com" class="bold">dev.mihodaniel@gmail.com</a>.</p>
+        </section>
+        <section id="work" class="animate fadeIn">
+          <h2 class="title">My work</h2>
+          <p>You can find some of the projects I worked on here.</p>
+          <ul id="work-list">
+            <li class="work-list-item bold">- <a href="work/poeatlas.html" class="work-link">PoE Atlas Progression</a><span class="faded serif"> — Personal project to help a community.</span></li>
+            <li class="work-list-item bold">- <a href="work/rxjs_project.html" class="work-link">RxJS Projects</a><span class="faded serif"> — Personal collection of projects using RxJS library.</span></li>
+            <li class="work-list-item bold">- <a href="https://github.com/Dubbie/portfolio" class="work-link">Portfolio</a><span class="faded serif"> — My own portfolio showcasing my recent skills.</span></li>
+          </ul>
+        </section>
+        <section id="skills" class="animate fadeIn">
+          <h2 class="title">Skills</h2>
+          <p>As I was dwelving deeper into developing, I tried to learn something new with each project. Here are a few of the skills I've accumulated over my experience. The list keeps growing!</p>
+          <ul id="skills-list">
+            <li class="skills-list-item bold">HTML5</li>
+            <li class="skills-list-item bold">CSS3
+              <ul class="sublist serif">
+                <li class="faded">SCSS</li>
+                <li class="faded extra-faded">SASS</li>
+              </ul>
+            </li>
+            <li class="skills-list-item bold">Programming
+              <ul class="sublist serif">
+                <li class="faded">PHP</li>
+                <li class="faded">C++</li>
+                <li class="faded">C#</li>
+                <li class="faded extra-faded">Python</li>
+              </ul>
+            </li>
+            <li class="skills-list-item bold">JavaScript
+              <ul class="sublist serif">
+                <li class="faded">jQuery</li>
+                <li class="faded">RxJS</li>
+                <li class="faded extra-faded">React</li>
+              </ul>
+            </li>
+            <li class="skills-list-item bold">Data
+              <ul class="sublist serif">
+                <li class="faded">MySQL</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <footer class="animate slideDown container">
+          <p class="faded">© 2016 <span class="bold">Mihó Dániel</span> — I'm on <a href="https://github.com/Dubbie">GitHub</a>!</p>
+        </footer>
       </div>
-    </section>
-    <section id="section2">
-      <div class="content">
-        <h1><span>Headline</span></h1>
-        <h2>Sub-head</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-    </section>
-    <section id="section3">
-      <p>
-        Nyuu
-      </p>
-    </section>
-    <section id="section4">
-      <p>
-        Nyuu
-      </p>
-    </section>
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    </div>
+
+    <!-- Portfolio -->
+    <script src="js/portfolio.js" charset="utf-8"></script>
+    <!-- WebfontLoader -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Roboto:400,700', 'Roboto Slab']
+        }
+      });
+    </script>
   </body>
 </html>

@@ -14,57 +14,9 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
 
-    <!-- Critical CSS -->
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        background: #111;
-        color: rgba(255, 255, 255, 0.75);
-        font-size: 16px;
-        overflow-y: scroll;
-      }
-
-      .logo-container {
-        display: block;
-        width: 64px;
-        height: 64px;
-        margin-bottom: 4em;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .logo-container .logo {
-        position: absolute;
-        display: block;
-        left: 0;
-        bottom: 0;
-        opacity: 1;
-      }
-
-      .wrapper {
-        max-width: 100%;
-        width: 700px;
-        position: absolute;
-        top: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .fadeIn, .slideDown, .slideUp, .slideRight, .slideLeft {
-        opacity: 0;
-      }
-
-      .animate {
-        transition: all 500ms ease-in-out;
-      }
-    </style>
-
     <!-- Stylesheets -->
-    <link rel="preload" href="css/test.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/master.css"></noscript>
+    <link rel="preload" href="css/master.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/master.min.css"></noscript>
   </head>
   <body>
     <div class="wrapper">
@@ -76,16 +28,20 @@
         </a>
         <section id="intro" class="animate fadeIn">
           <h1>Hello, my name is Mihó Dániel.</h1>
-          <p>Based in Hungary, studying Computer Science in University. Currently I'm available for freelance work. You can contact me at <a href="mailto:dev.mihodaniel@gmail.com" class="bold">dev.mihodaniel@gmail.com</a>.</p>
+          <p>Based in Hungary, studying Software Engineering in University. Currently I'm available for freelance work.</p>
+          <p>You can contact me at <a href="mailto:dev.mihodaniel@gmail.com" class="bold">dev.mihodaniel@gmail.com</a>.</p>
         </section>
         <section id="work" class="animate fadeIn">
           <h2 class="title">My work</h2>
           <p>You can find some of the projects I worked on here.</p>
           <ul id="work-list">
+            <li class="work-list-item bold">- <a href="work/sifokk.html" class="work-link">SIFOKK</a><span class="faded serif"> — Custom made CMS for client.</span></li>
             <li class="work-list-item bold">- <a href="work/poeatlas.html" class="work-link">PoE Atlas Progression</a><span class="faded serif"> — Personal project to help a community.</span></li>
             <li class="work-list-item bold">- <a href="work/rxjs_project.html" class="work-link">RxJS Projects</a><span class="faded serif"> — Personal collection of projects using RxJS library.</span></li>
             <li class="work-list-item bold">- <a href="https://github.com/Dubbie/portfolio" class="work-link">Portfolio</a><span class="faded serif"> — My own portfolio showcasing my recent skills.</span></li>
           </ul>
+          <p>I enjoy creating websites because everytime I make a new one, something pops up and I can learn something new again!</p>
+          <p>Starting from basic HTML / CSS websites I have worked my way up to creating websites using <a href="https://facebook.github.io/react/">React</a>!</p>
         </section>
         <section id="skills" class="animate fadeIn">
           <h2 class="title">Skills</h2>
@@ -95,33 +51,41 @@
             <li class="skills-list-item bold">CSS3
               <ul class="sublist serif">
                 <li class="faded">SCSS</li>
-                <li class="faded extra-faded">SASS</li>
+                <li class="faded extra-faded">SMACSS</li>
               </ul>
             </li>
             <li class="skills-list-item bold">Programming
               <ul class="sublist serif">
                 <li class="faded">PHP</li>
-                <li class="faded">C++</li>
                 <li class="faded">C#</li>
+                <li class="faded">C++</li>
                 <li class="faded extra-faded">Python</li>
               </ul>
             </li>
             <li class="skills-list-item bold">JavaScript
               <ul class="sublist serif">
                 <li class="faded">jQuery</li>
-                <li class="faded">RxJS</li>
-                <li class="faded extra-faded">React</li>
+                <li class="faded">React</li>
+                <li class="faded extra-faded">NodeJS</li>
+                <li class="faded extra-faded">RxJS</li>
               </ul>
             </li>
             <li class="skills-list-item bold">Data
               <ul class="sublist serif">
                 <li class="faded">MySQL</li>
+                <li class="faded">MongoDB</li>
               </ul>
             </li>
           </ul>
         </section>
-        <footer class="animate slideDown container">
-          <p class="faded">© 2016 <span class="bold">Mihó Dániel</span> — I'm on <a href="https://github.com/Dubbie">GitHub</a>!</p>
+        <footer class="container">
+          <ul class="level">
+            <li class="level-item">mail</li>
+            <li class="level-item">gh</li>
+            <li class="level-item">fb</li>
+            <li class="level-item">tw</li>
+          </ul>
+          <p class="faded">2017 <span class="bold">Mihó Dániel</span></p>
         </footer>
       </div>
     </div>
@@ -136,6 +100,16 @@
           families: ['Roboto:400,700', 'Roboto Slab']
         }
       });
+    </script>
+    <!-- GoogleAnalytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-78843908-1', 'auto');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>

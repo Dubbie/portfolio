@@ -9,8 +9,9 @@
   "author": "Mihó Dániel",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "gulp": "^4.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "tar": ">=4.4.2"
   }
 }

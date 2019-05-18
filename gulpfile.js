@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
+const terser = require('gulp-terser');
+const browserSync = require('browser-sync').create();
 
 function reload(done) {
     browserSync.reload();
@@ -18,7 +19,6 @@ function style() {
 
 function watch() {
     browserSync.init({
-        // proxy: 'mihodaniel.local/app/'
         watch: true,
         server: "./app"
     });
@@ -26,4 +26,24 @@ function watch() {
     gulp.watch("app/*.html", reload);
 }
 
+function build(done) {
+    // Copy HTML Files
+    gulp.src("app/*.html")
+        .pipe(gulp.dest('dist/'));
+
+    // Copy CSS
+    gulp.src("app/css/*.css")
+        .pipe(gulp.dest("dist/css/"));
+
+    // Copy JS Files
+    gulp.src("app/js/*.js")
+        .pipe(terser().on('error', function(e) {
+            console.log(e)
+        }))
+        .pipe(gulp.dest("dist/js/"));
+
+    done();
+}
+
 exports.watch = watch;
+exports.build = build;

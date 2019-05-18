@@ -1,7 +1,7 @@
 @charset "UTF-8";
-/* http://meyerweb.com/eric/tools/css/reset/ 
-	v2.0 | 20110126
-	License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -46,36 +46,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-* {
-  box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth; }
-
-body {
-  overflow-y: scroll;
-  line-height: 1.5;
-  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
-  font-size: 21px;
-  color: #333; }
-
-section {
-  position: relative;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out; }
-  section#intro {
-    height: 70vh; }
-  section#work a {
-    font-weight: 700; }
-  section#contact {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    font-size: 16px; }
-
 h1 {
   font-size: 2.4rem;
   line-height: 1.4;
@@ -92,7 +62,7 @@ b {
 
 a {
   position: relative;
-  color: #000;
+  color: #111111;
   text-decoration: none;
   font-weight: 700; }
   a:before {
@@ -103,16 +73,46 @@ a {
     left: 0;
     width: 100%;
     height: 0.33em;
-    background-color: #ccc;
+    background-color: rgba(45, 187, 84, 0.5);
     z-index: -1;
-    transition: all 250ms ease-in-out; }
+    transition: all 200ms ease-in-out; }
   a:hover:before {
-    background-color: #26d665;
+    background-color: #2DBB54;
     height: 100%; }
 
-.container {
-  padding-left: 20%;
-  padding-right: 20%; }
+.huge {
+  font-size: 3rem; }
+
+.big {
+  font-size: 24px; }
+
+.small {
+  font-size: 16px; }
+
+.muted {
+  color: #999;
+  font-weight: 400; }
+
+.oof {
+  text-decoration: line-through;
+  color: #d0d0d0; }
+
+.text-dark {
+  color: #333; }
+
+.text-center {
+  text-align: center !important; }
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: right;
+  padding-right: 0.33em;
+  transform: rotate(-90deg) translate(-100%, -200%);
+  transform-origin: left top;
+  color: #d0d0d0;
+  font-weight: 700; }
 
 .hungary {
   padding-left: 0.25rem;
@@ -128,23 +128,17 @@ a {
     left: 0;
     height: 0.25em;
     width: 100%;
-    background: linear-gradient(red 33%, white 34%, white 66%, green 67%);
-    background-color: black; }
-
-.floaty-container {
-  height: 100%;
-  display: flex;
-  align-items: center; }
+    background: black linear-gradient(red 33%, white 34%, white 66%, green 67%); }
 
 .links {
   margin-top: 2.5rem;
   font-size: 16px; }
   .links a {
-    color: #26d665;
+    color: #2DBB54;
     margin-right: 1rem;
     position: relative; }
     .links a:hover:before {
-      background-color: #26d665;
+      background-color: #2DBB54;
       height: 2px;
       display: block; }
     .links a:before {
@@ -156,32 +150,6 @@ a {
       color: #ccc; }
     .links a:last-child:after {
       content: ""; }
-
-.huge {
-  font-size: 3rem; }
-
-.big {
-  font-size: 24px; }
-
-.small {
-  font-size: 16px; }
-
-.muted {
-  color: #999;
-  font-weight: 400; }
-
-.margin-bottom {
-  margin-bottom: 2rem; }
-
-.oof {
-  text-decoration: line-through;
-  color: #ccc; }
-
-.text-dark {
-  color: #333; }
-
-.text-center {
-  text-align: center !important; }
 
 .list .list-item {
   margin-bottom: 1rem; }
@@ -196,6 +164,48 @@ a {
   .list .list-item .thumbnail {
     max-width: 200px;
     display: block; }
+
+section {
+  position: relative;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  section#intro {
+    height: 70vh; }
+  section#work a {
+    font-weight: 700; }
+  section#contact {
+    padding-top: 10%;
+    padding-bottom: 10%; }
+
+* {
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  overflow-y: scroll;
+  line-height: 1.5;
+  font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+  font-size: 21px;
+  color: #111111; }
+
+.container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.floaty-container {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.margin-bottom {
+  margin-bottom: 2rem; }
 
 .flex {
   display: flex;

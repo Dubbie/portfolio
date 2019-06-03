@@ -181,6 +181,32 @@ section {
     padding-top: 10%;
     padding-bottom: 10%; }
 
+#fun {
+  background-color: #FFFFFF;
+  height: 75vh; }
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  z-index: 2; }
+
+.parallax-container {
+  background-color: #d0b07a;
+  position: relative;
+  height: 50vh;
+  width: 640px;
+  margin: 0 auto;
+  clip-path: circle(160px at center); }
+
+.parallax {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
 * {
   box-sizing: border-box; }
 
@@ -192,7 +218,8 @@ body {
   line-height: 1.5;
   font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
   font-size: 21px;
-  color: #111111; }
+  color: #111111;
+  overflow-x: hidden; }
 
 .container {
   position: relative;

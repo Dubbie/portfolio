@@ -4,6 +4,7 @@
 @import "links";
 @import "list";
 @import "section";
+@import "fun";
 
 * {
   box-sizing: border-box;
@@ -19,6 +20,7 @@ body {
   font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
   font-size: 21px;
   color: $dark;
+  overflow-x: hidden;
 }
 
 .container {

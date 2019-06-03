@@ -42,6 +42,10 @@ function build(done) {
         }))
         .pipe(gulp.dest("dist/js/"));
 
+    // Copy Image Files
+    gulp.src("app/img/*.png")
+        .pipe(gulp.dest('dist/img'));
+
     done();
 }
 

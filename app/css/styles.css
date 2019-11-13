@@ -153,7 +153,8 @@ a {
       position: absolute;
       content: "•";
       left: calc(100% + 0.5rem);
-      color: #ccc; }
+      color: #ccc;
+      top: 0; }
     .links a:last-child:after {
       content: ""; }
 
@@ -166,6 +167,9 @@ a {
 .small {
   font-size: 16px; }
 
+.mb-1 {
+  margin-bottom: 1rem; }
+
 .muted {
   color: #999;
   font-weight: 400; }
@@ -176,6 +180,11 @@ a {
 .oof {
   text-decoration: line-through;
   color: #ccc; }
+  .oof:before {
+    content: "";
+    display: none; }
+  .oof:hover {
+    color: #bbb; }
 
 .text-dark {
   color: #333; }

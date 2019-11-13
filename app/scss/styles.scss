@@ -195,6 +195,7 @@ a {
       content: "•";
       left: calc(100% + 0.5rem);
       color: #ccc;
+      top: 0;
     }
 
     &:last-child:after {
@@ -215,6 +216,10 @@ a {
   font-size: 16px;
 }
 
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
 .muted {
   color: #999;
   font-weight: 400;
@@ -227,6 +232,15 @@ a {
 .oof {
   text-decoration: line-through;
   color: #ccc;
+  
+  &:before {
+    content: "";
+    display: none;
+  }
+
+  &:hover {
+    color: #bbb;
+  }
 }
 
 .text-dark {

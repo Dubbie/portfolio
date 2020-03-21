@@ -147,9 +147,44 @@ a {
       position: absolute;
       content: "•";
       left: calc(100% + 0.5rem);
-      color: #ccc; }
+      color: #ccc;
+      top: 0; }
     .links a:last-child:after {
       content: ""; }
+
+.huge {
+  font-size: 3rem; }
+
+.big {
+  font-size: 24px; }
+
+.small {
+  font-size: 16px; }
+
+.mb-1 {
+  margin-bottom: 1rem; }
+
+.muted {
+  color: #999;
+  font-weight: 400; }
+
+.margin-bottom {
+  margin-bottom: 2rem; }
+
+.oof {
+  text-decoration: line-through;
+  color: #ccc; }
+  .oof:before {
+    content: "";
+    display: none; }
+  .oof:hover {
+    color: #bbb; }
+
+.text-dark {
+  color: #333; }
+
+.text-center {
+  text-align: center !important; }
 
 .list .list-item {
   margin-bottom: 1rem; }
